@@ -3,6 +3,10 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
+/* If @custom-variant is from a plugin, ensure the plugin is installed in tailwind.config.js */
+/* Example: plugins: [require('tailwindcss-custom-variant')] or similar */
+/* If not supported, remove or replace with standard Tailwind variants */
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -74,6 +78,8 @@
     --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* If @theme is not supported, remove or migrate to Tailwind v4 */
+/* Otherwise, keep as is if using compatible version */
 @theme inline {
     --font-sans: 'Geist Variable', sans-serif;
     --color-sidebar-ring: var(--sidebar-ring);
